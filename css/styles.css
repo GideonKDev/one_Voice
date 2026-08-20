@@ -101,9 +101,9 @@ header {
   line-height: 1;
 }
 .brand-logo {
-  width: auto;
+  width: 95px;
   height: auto;
-  max-height: 24px;
+  max-height: 36px;
   object-fit: contain;
 }
 
