@@ -12,19 +12,19 @@
 </head>
 <body>
 
-<header>
-  <a href="#top" class="brand">
-    <img src="Images/logo.png" alt="One Voice Africa" class="brand-logo">
+<header class="site-header">
+  <a href="#top" class="brand" aria-label="One Voice Africa home">
+    <img src="Images/logo.png" alt="One Voice Africa" class="brand-logo" width="190" height="72" decoding="async">
   </a>
-  <nav class="links" id="navLinks">
+  <nav class="links" id="navLinks" aria-label="Primary navigation" aria-hidden="true">
     <a href="#about">About</a>
     <a href="#pillars">Our Work</a>
     <a href="#team">Leadership</a>
     <a href="#values">Values</a>
     <a href="#contact" class="nav-cta">Partner With Us</a>
   </nav>
-  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
   </button>
 </header>
 
@@ -35,12 +35,12 @@
     <div class="hero-arcs" aria-hidden="true">
       <svg viewBox="0 0 600 600">
         <g stroke="#E3A83B" fill="none">
-          <path class="arc-path" style="animation-delay:0.1s" stroke="rgba(247,243,234,0.5)" d="M300,300 m0,-260 a260,260 0 0 1 0,520" />
-          <path class="arc-path" style="animation-delay:0.25s" stroke="#2FA88E" stroke-opacity="0.55" d="M300,300 m0,-200 a200,200 0 0 1 0,400" />
-          <path class="arc-path" style="animation-delay:0.4s" stroke="#E3A83B" stroke-opacity="0.7" d="M300,300 m0,-140 a140,140 0 0 1 0,280" />
-          <path class="arc-path" style="animation-delay:0.55s" stroke="rgba(247,243,234,0.65)" d="M300,300 m0,-80 a80,80 0 0 1 0,160" />
+          <path class="arc-path" stroke="rgba(247,243,234,0.5)" d="M300,300 m0,-260 a260,260 0 0 1 0,520" />
+          <path class="arc-path" stroke="#2FA88E" stroke-opacity="0.55" d="M300,300 m0,-200 a200,200 0 0 1 0,400" />
+          <path class="arc-path" stroke="#E3A83B" stroke-opacity="0.7" d="M300,300 m0,-140 a140,140 0 0 1 0,280" />
+          <path class="arc-path" stroke="rgba(247,243,234,0.65)" d="M300,300 m0,-80 a80,80 0 0 1 0,160" />
         </g>
-        <circle class="arc-path" style="animation-delay:0.7s" cx="300" cy="300" r="14" fill="#F7F3EA" stroke="none"/>
+        <circle class="arc-path" cx="300" cy="300" r="14" fill="#F7F3EA" stroke="none"/>
       </svg>
     </div>
     <div class="wrap">
@@ -70,10 +70,10 @@
       <div class="about-grid">
         <div class="reveal">
           <p class="eyebrow">Who We Are</p>
-          <h2 style="margin-top:0.9rem; margin-bottom:1.5rem;">A progressive, community-first organization</h2>
+          <h2 class="about-heading">A progressive, community-first organization</h2>
           <p>One Voice Africa (OVA) is a progressive, community-focused organization dedicated to empowering individuals and fostering sustainable growth across African communities.</p>
           <p>By uniting diverse voices and establishing inclusive support structures, we drive long-term impact through tailored initiatives in education, health, community development, and gender-inclusive mentorship.</p>
-          <a href="#pillars" class="btn btn-primary" style="margin-top:0.8rem; background:var(--green-deep); color:var(--ivory);">Explore Our Pillars</a>
+          <a href="#pillars" class="btn btn-primary about-link">Explore Our Pillars</a>
         </div>
         <div class="about-visual reveal">
           <svg viewBox="0 0 400 500" aria-hidden="true">
@@ -92,9 +92,9 @@
   <!-- VISION / MISSION -->
   <section class="vm">
     <div class="wrap">
-      <div class="section-head reveal" style="color:var(--ivory);">
+      <div class="section-head section-head-dark reveal">
         <p class="eyebrow">Where We're Headed</p>
-        <h2 style="color:var(--ivory);">Our Strategic Direction</h2>
+        <h2>Our Strategic Direction</h2>
       </div>
       <div class="vm-grid reveal">
         <div class="vm-cell">
@@ -170,7 +170,7 @@
         <div class="chair-media">
           <div class="img-placeholder">
             <!-- Replace src with Chairperson portrait -->
-            <img src="/Images/Bill-Gates.jpeg" alt="Chairperson Portrait" loading="lazy">
+            <img src="Images/Bill-Gates.jpeg" alt="Portrait of Mr. Daniel Langat, Board Chairperson" loading="lazy" decoding="async" width="900" height="1200">
             <span class="role-badge">Executive Leadership</span>
           </div>
         </div>
@@ -185,8 +185,8 @@
             </p>
           </div>
           <div class="team-socials">
-            <a href="#" aria-label="LinkedIn profile">LinkedIn ↗</a>
-            <a href="#" aria-label="Executive publications">Executive Insights ↗</a>
+            <span>LinkedIn profile pending</span>
+            <span>Executive insights pending</span>
           </div>
         </div>
       </div>
@@ -198,11 +198,11 @@
         <!-- vice chairperson  -->
         <div class="team-card reveal">
           <div class="img-placeholder">
-            <img src="/Images/kirui_Philemon.jpeg" alt="Lead, Youth & Mentorship" loading="lazy">
+            <img src="Images/kirui_Philemon.jpeg" alt="Portrait of Mr. Kirui Philemon, Vice Chairperson" loading="lazy" decoding="async" width="900" height="675">
           </div>
           <div class="team-info">
             <span class="member-role">Vice Chairperson</span>
-            <h4>Mr. Kirui Philemon</h4>
+            <h3>Mr. Kirui Philemon</h3>
             <p>Mr. Kirui Philemon serves as the Vice Chairperson of One Voice Africa, supporting executive governance and the strategic rollout of the NGO's core impact programs. Dedicated
                to grassroots community empowerment, he works to advance educational access, preventive health awareness, sustainable local development, and transformative mentorship across Kenya.</p>
           </div>
@@ -210,11 +210,11 @@
 
         <div class="team-card reveal">
           <div class="img-placeholder">
-            <img src="/Images/korir gilbert.jpeg" alt="Secretary" loading="lazy">
+            <img src="Images/korir gilbert.jpeg" alt="Portrait of Korir Gilbert, Secretary" loading="lazy" decoding="async" width="900" height="675">
           </div>
           <div class="team-info">
             <span class="member-role">Secretary</span>
-            <h4>Korir Gilbert</h4>
+            <h3>Korir Gilbert</h3>
             <p>Mr. Korir Gilbert oversees institutional documentation, board correspondence, and strategic communication for One Voice Africa. He ensures seamless administrative coordination across all educational, health, and community outreach programs, upholding the highest standards of 
               transparency and organizational efficiency to drive the NGO's mission forward across Kenyan communities</p>
           </div>
@@ -223,11 +223,11 @@
         
         <div class="team-card reveal">
           <div class="img-placeholder">
-            <img src="/Images/Lyndah Rono.jpeg" alt="Treasurer" loading="lazy">
+            <img src="Images/Lyndah Rono.jpeg" alt="Portrait of Lyndah Rono, Treasurer" loading="lazy" decoding="async" width="900" height="675">
           </div>
           <div class="team-info">
             <span class="member-role">Treasurer</span>
-            <h4>Lyndah Rono</h4>
+            <h3>Lyndah Rono</h3>
             <p>Mrs. Lyndah Rono leads the financial planning, budget allocation, and fiscal oversight for One Voice Africa. Guided by the core value of integrity, she ensures transparent and accountable management of resources, guaranteeing that funding and community 
               partnerships directly fuel impactful, sustainable grassroots projects in education, health care, and mentorship.</p>
           </div>
@@ -235,11 +235,11 @@
 
         <div class="team-card reveal">
           <div class="img-placeholder">
-            <img src="/Images/Vice-Secretary.jpeg" alt="Lead, Youth & Mentorship" loading="lazy">
+            <img src="Images/Vice-Secretary.jpeg" alt="Portrait of Mrs. Masumuni Jane, Vice Secretary" loading="lazy" decoding="async" width="900" height="675">
           </div>
           <div class="team-info">
             <span class="member-role">Vice Secretary</span>
-            <h4>Mrs. Masumuni Jane</h4>
+            <h3>Mrs. Masumuni Jane</h3>
             <p>Curating scalable skill-acquisition workshops, modern technical pathways, and gender-inclusive mentorship networks.</p>
           </div>
         </div>
@@ -250,9 +250,9 @@
   <!-- VALUES -->
   <section class="values" id="values">
     <div class="wrap">
-      <div class="section-head reveal" style="color:var(--ivory);">
+      <div class="section-head section-head-dark reveal">
         <p class="eyebrow">Guiding Principles</p>
-        <h2 style="color:var(--ivory);">What holds us together</h2>
+        <h2>What holds us together</h2>
       </div>
       <hr class="values-rule">
       <div class="values-grid reveal">
@@ -320,7 +320,7 @@
       <div>
         <h4>Connect</h4>
         <ul>
-          <li><a href="mailto:info@onevoiceafrica.org">onevoiceafrica2026@gmail.com</a></li>
+          <li><a href="mailto:onevoiceafrica2026@gmail.com">onevoiceafrica2026@gmail.com</a></li>
           <li><a href="#contact">Partner With Us</a></li>
         </ul>
       </div>
