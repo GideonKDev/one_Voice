@@ -69,3 +69,43 @@ if (prefersReducedMotion) {
 } else {
   revealEls.forEach((element) => element.classList.add('is-visible'));
 }
+
+const slider = document.querySelector('[data-slider]');
+
+if (slider) {
+  const slides = [...slider.querySelectorAll('.agm-slide')];
+  const dots = [...slider.querySelectorAll('.agm-dot')];
+  const currentLabel = slider.querySelector('[data-slide-current]');
+  let currentIndex = 0;
+  let autoplay;
+
+  const showSlide = (nextIndex) => {
+    currentIndex = (nextIndex + slides.length) % slides.length;
+    slides.forEach((slide, index) => slide.classList.toggle('is-active', index === currentIndex));
+    dots.forEach((dot, index) => {
+      const isActive = index === currentIndex;
+      dot.classList.toggle('is-active', isActive);
+      dot.setAttribute('aria-selected', String(isActive));
+    });
+    if (currentLabel) currentLabel.textContent = String(currentIndex + 1).padStart(2, '0');
+  };
+
+  const stopAutoplay = () => window.clearInterval(autoplay);
+  const startAutoplay = () => {
+    if (prefersReducedMotion) return;
+    stopAutoplay();
+    autoplay = window.setInterval(() => showSlide(currentIndex + 1), 5500);
+  };
+
+  slider.querySelector('.agm-prev')?.addEventListener('click', () => { showSlide(currentIndex - 1); startAutoplay(); });
+  slider.querySelector('.agm-next')?.addEventListener('click', () => { showSlide(currentIndex + 1); startAutoplay(); });
+  dots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index); startAutoplay(); }));
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+  slider.addEventListener('focusin', stopAutoplay);
+  slider.addEventListener('focusout', (event) => {
+    if (!slider.contains(event.relatedTarget)) startAutoplay();
+  });
+
+  startAutoplay();
+}
